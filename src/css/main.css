@@ -205,6 +205,7 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
+    user-select:none;
 }
 
 .container .content__section .hero_content .hero_header .hero_text_root::before{
