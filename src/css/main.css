@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;600;800&display=swap');
 
+@font-face{
+    font-family: Minecraft;
+    src: url(../fonts/Minecraft.ttf);
+}
+@font-face {
+    font-family: HandNote;
+    src: url(../fonts/Hand\ Note.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 a{
@@ -36,6 +49,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding-bottom: 2%;
+    z-index: 99;
 }
 
 .container .menu .menu_logo{
@@ -50,15 +64,18 @@ body{
 }
 
 .container .menu .menu_logo h6{
+    user-select: none;
     font-size: 1.1rem;
 }
 
 .container .menu .menu_logo p{
+    user-select: none;
     font-size: 0.6rem;
     letter-spacing: 3px;
 }
 
-#S{
+.S{
+    user-select: none;
     display: inline-block;
     line-height: 0.8;
     font-size: 6rem;
@@ -73,6 +90,9 @@ body{
     -14px 1px 14px rgba(0,0,0,0.4)  ,
     -16px 1px 8px rgba(0,0,0,0.4)  ,
     -18px 1px 28px rgba(0,0,0,0.4) ;
+    transition: transform .5s ease-in-out ;
+    animation-name: animateLetter;
+    animation-duration:2s;
 }
 
 .container .menu nav{
@@ -116,7 +136,7 @@ body{
     outline: none;
     cursor: pointer;
     display: none;
-    z-index: 99;
+    z-index: 100;
 }
 
 .menu_hamburger svg{
@@ -127,14 +147,181 @@ body{
 
 /*! menu end  */
 
-
+/*! content section start  */
 
 .container .content__section{
     width: 100%;
     height: 100vh;
-    overflow-y: auto;
-    
+    overflow-y: auto;  
+    position: relative; 
+    overflow-x: hidden;
 }
+
+.container .content__section::before{
+    content: "<html>";
+    color: #7c7c7c;
+    position: absolute;
+    top: 1%;
+    font-family: HandNote , monospace;
+    left: 1%;
+    font-size: 1.5rem;
+}
+
+/*! content section end  */
+
+/*! Hero Content Start */
+
+.container .content__section .hero_content{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    padding: 0 3%;
+    animation:2s animateSection;
+    position: relative;
+}
+
+.container .content__section .hero_content::before{
+    content: "<body>";
+    color: #7c7c7c;
+    position: absolute;
+    top: 6%;
+    font-family: HandNote , monospace;
+    left: 3%;
+    font-size: 1.5rem;
+}
+
+
+
+.container .content__section .hero_content .hero_header {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: white;
+}
+
+.container .content__section .hero_content .hero_header .hero_text_root{
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .content__section .hero_content .hero_header .hero_text_root::before{
+    content: "<h1>";
+    color: #7c7c7c;
+    position: absolute;
+    top: -8%;
+    font-family: HandNote , monospace;
+    left: 1px;
+    font-size: 1.3rem;
+}
+
+.container .content__section .hero_content .hero_header .hero_text_root::after{
+    content: "</h1>";
+    color: #7c7c7c;
+    position: absolute;
+    bottom: -10%;
+    font-family: HandNote , monospace;
+    left: 1px;
+    font-size: 1.3rem;
+}
+
+.container .content__section .hero_content .hero_header .hero_text_root div{
+    height: 6rem;
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+}
+
+.container .content__section .hero_content .hero_header .hero_text_root .nice_text{
+    animation-name: animateLetter;
+    animation-duration:2s;
+    animation-iteration-count: 1;
+    transition: transform .3s ease-in-out ,  text-shadow .5s ease-in-out;
+}
+
+.container .content__section .hero_content .hero_header .hero_text_root .nice_text:hover{
+    transform: scale(0.6 , 1.3);
+    text-shadow: 0 0 8px rgba(255, 170, 0, 0.9);
+}
+
+
+
+.container .content__section .hero_content .hero_header .hero_about_text{
+    color: #7c7c7c;
+    font-size: 1.2rem;
+    height: 30px;
+    position: relative;
+}
+
+
+.container .content__section .hero_content .hero_header .hero_about_text::after{
+    content: "";
+    border-left: 1px solid #7c7c7c;
+}
+
+
+
+
+.container .content__section .hero_content .hero_header .contact_btn{
+    width: 30%;
+    padding: 0.8rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #4dfd21;
+    box-shadow: 0 0 15px #23ff01a8 ,  inset 0 0 0 0 #4dfd21;
+    font-weight: bold;
+    transition: box-shadow .3s ease-in-out , transform .3s ease-in-out;
+}
+
+
+
+.container .content__section .hero_content .hero_header .contact_btn:hover{
+    box-shadow: 0 0 15px #23ff01a8 ,  inset 200px 0 0 0 #4dfd21;
+    transform: scale(1.1);
+}
+
+/*! Hero Content End */
+ 
+/** Animations Start  */
+@keyframes animateSection {
+    0%{
+        transform: translate(0 , -300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0 , 0);
+        opacity: 100;
+    }
+}
+
+@keyframes animateLetter {
+    0% {
+        transform: scale(0.7 , 1.4)  translate(0 , -170px);
+        opacity: 0;
+    }
+    40%{
+        
+        transform: scale(1 , 0.5) ;
+    }
+    70%{
+        transform: scale(0.6 , 1.2) ;
+    }
+    100%{
+        transform: scale(1 , 1)  translate(0 , 0);
+        opacity: 100;
+    }
+}
+
+@keyframes animateText {
+    0%{ transform: scale(0.5 , 1.3);}
+    100%{ transform: scale(1 , 1); }
+}
+/** Animations End  */
+
+
 
 
 /*? Responsive Start */
@@ -159,6 +346,60 @@ body{
         right: 10px;
     }
     /*! Menu end */
+
+    /*! hero content start  */
+    .container .content__section .hero_content .hero_header .hero_text_root{
+        font-size:3.8rem;
+    }
+    .container .content__section .hero_content .hero_header .hero_text_root div .S {
+        font-size: 4rem!important;
+    }
+
+    /*! hero content end  */
 }
+
+@media only screen and (max-width: 563px){
+    .container .content__section .hero_content .hero_header .hero_text_root{
+        font-size:2.8rem;   
+    }
+
+    .container .content__section .hero_content .hero_header {
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .container .content__section .hero_content .hero_header .hero_text_root div{
+        height: 5rem;
+    }
+    .container .content__section .hero_content .hero_header .hero_text_root div .S {
+        font-size: 3rem!important;
+    }
+}   
+
+@media only screen and (max-width: 438px){
+    .container .content__section{
+        align-items: center;
+    }
+    
+    .container .content__section .hero_content .hero_header .hero_text_root{
+        
+        font-size:2.2rem;   
+    }
+
+    .container .content__section .hero_content .hero_header .hero_text_root div{
+        height: 4rem;
+    }
+    .container .content__section .hero_content .hero_header .hero_text_root div .S {
+        font-size: 3rem!important;
+    }
+    .container .content__section .hero_content .hero_header .contact_btn{
+        width: 80%;
+    }
+
+    .container .content__section .hero_content .hero_header .contact_btn:hover{
+       box-shadow: inset 280px 0 0 0 #4dfd21;
+    }
+}   
+
 
 /*? Responsive End */
