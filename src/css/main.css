@@ -198,6 +198,7 @@ body{
     flex-direction: column;
     gap: 3rem;
     color: white;
+    user-select: none;
 }
 
 .container .content__section .hero_content .hero_header .hero_text_root{
@@ -206,6 +207,7 @@ body{
     flex-direction: column;
     position: relative;
     user-select:none;
+
 }
 
 .container .content__section .hero_content .hero_header .hero_text_root::before{
