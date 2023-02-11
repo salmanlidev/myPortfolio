@@ -92,12 +92,12 @@ function Delete() {
 		// Start to display the next sentence after some time
 		setTimeout(function() {
 			// _CURSOR.style.display = 'inline-block';
-			_INTERVAL_VAL = setInterval(Type, 200);
+			_INTERVAL_VAL = setInterval(Type, 50);
 		}, 200);
 	}
 }
 
 // Start the typing effect on load
-_INTERVAL_VAL = setInterval(Type, 200);
+_INTERVAL_VAL = setInterval(Type, 50);
 
 
