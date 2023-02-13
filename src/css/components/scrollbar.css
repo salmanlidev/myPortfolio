@@ -13,4 +13,5 @@
     background-color: #4dfd21;
     background: linear-gradient(180deg, rgba(255,170,0,1) 0%, rgba(39,255,0,1) 96%);
     transition: 0.3s;
+    box-shadow: 0 0 15px rgba(39,255,0,1);
 }
