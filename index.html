@@ -10,6 +10,16 @@
 </head>
 
 <body>
+    <div class="scrollbar"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
     <main class="container">
 
         <!--! Menu Start -->
@@ -59,6 +69,49 @@
 
         <section class="content__section">
             <div class="hero_content">
+                <canvas id="canvas"></canvas>
+                <header class="hero_header">
+                    <h1 class="hero_text_root">
+                        <div>
+                            <span class="nice_text">H</span>
+                            <span class="nice_text">i</span>
+                            <span class="nice_text">,</span>
+                        </div>
+                        <div>
+                            <span class="nice_text">I</span>
+                            <span class="nice_text" style="margin-bottom: 80px;">,</span>
+                            <span class="nice_text" style="margin-right: 1.2rem;">m</span>
+                            <span class="S" style="font-size: 6rem;">S</span>
+                            <span class="nice_text">a</span>
+                            <span class="nice_text">m</span>
+                            <span class="nice_text">i</span>
+                            <span class="nice_text">r</span>
+                            <span class="nice_text">,</span>
+                        </div>
+
+                        <div>
+                            <span class="nice_text">w</span>
+                            <span class="nice_text">e</span>
+                            <span class="nice_text">b</span>
+                            <span class="nice_text" style="margin-left: 1.5rem;">d</span>
+                            <span class="nice_text">e</span>
+                            <span class="nice_text">v</span>
+                            <span class="nice_text">e</span>
+                            <span class="nice_text">l</span>
+                            <span class="nice_text">o</span>
+                            <span class="nice_text">p</span>
+                            <span class="nice_text">e</span>
+                            <span class="nice_text">r</span>
+                        </div>
+                    </h1>
+                    <p class="hero_about_text" id="hero_about_type"></p>
+                    <a class="contact_btn">Contact</a>
+                    
+                </header>
+            
+            </div>
+            <div class="hero_content">
+                <canvas id="canvas"></canvas>
                 <header class="hero_header">
                     <h1 class="hero_text_root">
                         <div>
@@ -103,7 +156,10 @@
     </main>
 
     <!--! Script -->
+    <script src="./src/js/networkAnim.js"></script>
+    <script src="./src/js/scrollbar.js"></script>
     <script src="./src/js/app.js"></script>
+    <script src="./src/js/circle.js"></script>
 </body>
 
 </html>

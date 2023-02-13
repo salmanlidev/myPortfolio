@@ -1,0 +1,12 @@
+.circle{
+    height: 24px;
+    width: 24px;
+    border-radius:24px ;
+    background-color: #4dfd21;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 999999999999999999;
+    /* transition: .1s; */
+    pointer-events: none;
+}
