@@ -10,3 +10,10 @@
     /* transition: .1s; */
     pointer-events: none;
 }
+
+@media only screen and (max-width: 580px){
+    .circle{
+        display: none;
+    }
+}
+    
