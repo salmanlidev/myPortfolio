@@ -30,31 +30,31 @@ hamburgerBtn.addEventListener("click", (e) => {
 })
 
 // List of sentences
-var _CONTENT = [ 
+let _CONTENT = [ 
 	"Frontend Devoloper", 
 	"Web Devoloper" ,
     "UI Designer"
 ];
 
 // Current sentence being processed
-var _PART = 0;
+let _PART = 0;
 
 // Character number of the current sentence being processed 
-var _PART_INDEX = 0;
+let _PART_INDEX = 0;
 
 // Holds the handle returned from setInterval
-var _INTERVAL_VAL;
+let _INTERVAL_VAL;
 
 // Element that holds the text
-var _ELEMENT = document.querySelector("#hero_about_type");
+let _ELEMENT = document.querySelector("#hero_about_type");
 
 // Cursor element 
-// var _CURSOR = document.querySelector("#cursor");
+// let _CURSOR = document.querySelector("#cursor");
 
 // Implements typing effect
 function Type() { 
 	// Get substring with 1 characater added
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	let text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
 	_ELEMENT.innerHTML = text;
 	_PART_INDEX++;
 
@@ -73,7 +73,7 @@ function Type() {
 // Implements deleting effect
 function Delete() {
 	// Get substring with 1 characater deleted
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	let text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
 	_ELEMENT.innerHTML = text;
 	_PART_INDEX--;
 
@@ -101,3 +101,21 @@ function Delete() {
 _INTERVAL_VAL = setInterval(Type, 50);
 
 
+const myTags = [
+	'JavaScript', 'CSS', 'HTML',
+	'React', 'git', 'Node.js',
+	"Bootstrap", "Tailwindcss", "Axios",
+	"Typescript", "SASS", "Next.js"
+];
+
+
+
+let windowSize = 250 ;
+
+let tagCloud =  TagCloud('.skills', myTags , {
+	radius : windowSize , 
+	maxSpeed : "normal" ,
+	initSpeed : "fast" ,
+	direction : 135 , 
+	keep : true
+});

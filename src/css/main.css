@@ -1,16 +1,14 @@
-@import url("./components/root.css");
+@import "./components/root.css";
+@import "./pages/about.css";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    scroll-behavior: smooth;
 }
 
 .container{
     width: 100%;
     display: flex;
     background-color: #1d1d1d;
-    
 }
 
 /*! menu start  */
@@ -63,7 +61,7 @@
     -7px 1px 1px rgba(255, 170, 0, 0.9) ,
     -14px 1px 14px rgba(0,0,0,0.4)  ,
     -16px 1px 8px rgba(0,0,0,0.4)  ,
-    -18px 1px 28px rgba(0,0,0,0.4) ;
+    -18px 1px 28px rgba(0,0,0,0.4)!important ;
     transition: transform .5s ease-in-out ;
     animation-name: animateLetter;
     animation-duration:2s;
@@ -130,6 +128,7 @@
     overflow-y: auto;  
     position: relative; 
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .container .content__section::before{
