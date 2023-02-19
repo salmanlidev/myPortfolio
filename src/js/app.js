@@ -1,6 +1,7 @@
 const hamburgerBtn = document.querySelector(".menu_hamburger")
 const menu = document.querySelector(".menu")
 
+
 hamburgerBtn.addEventListener("click", (e) => {
     hamburgerBtn.classList.toggle("activeHamburger")
     if (hamburgerBtn.classList.contains("activeHamburger")) {
@@ -27,6 +28,11 @@ hamburgerBtn.addEventListener("click", (e) => {
         menu.style.transform = "scale(0)"
         menu.style.opacity = "0"
     }
+})
+
+document.querySelector(".menu nav").addEventListener("click" , () => {
+	menu.style.transform = "scale(0)"
+	menu.style.opacity = "0"
 })
 
 // List of sentences
