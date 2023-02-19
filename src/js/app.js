@@ -31,7 +31,9 @@ hamburgerBtn.addEventListener("click", (e) => {
 })
 
 document.querySelector(".menu nav").addEventListener("click" , () => {
-	hamburgerBtn.innerHTML = `
+	console.log(window.innerWidth)
+	if(window.innerWidth < 822){
+		hamburgerBtn.innerHTML = `
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -40,6 +42,7 @@ document.querySelector(".menu nav").addEventListener("click" , () => {
     </svg>`;
 	menu.style.transform = "scale(0)"
 	menu.style.opacity = "0"
+	}
 })
 
 // List of sentences
