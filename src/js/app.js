@@ -3,7 +3,7 @@ const menu = document.querySelector(".menu")
 
 
 hamburgerBtn.addEventListener("click", (e) => {
-    hamburgerBtn.classList.toggle("activeHamburger")
+	hamburgerBtn.classList.toggle("activeHamburger")
     if (hamburgerBtn.classList.contains("activeHamburger")) {
         hamburgerBtn.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
@@ -27,11 +27,12 @@ hamburgerBtn.addEventListener("click", (e) => {
     </svg>`;
         menu.style.transform = "scale(0)"
         menu.style.opacity = "0"
+		
     }
+	
 })
 
 document.querySelector(".menu nav").addEventListener("click" , () => {
-	console.log(window.innerWidth)
 	if(window.innerWidth < 822){
 		hamburgerBtn.innerHTML = `
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -42,6 +43,7 @@ document.querySelector(".menu nav").addEventListener("click" , () => {
     </svg>`;
 	menu.style.transform = "scale(0)"
 	menu.style.opacity = "0"
+	hamburgerBtn.classList.remove("activeHamburger")
 	}
 })
 
@@ -126,7 +128,7 @@ const myTags = [
 
 
 
-let windowSize = 250 ;
+let windowSize = 300 ;
 
 let tagCloud =  TagCloud('.skills', myTags , {
 	radius : windowSize , 
