@@ -220,6 +220,8 @@
     .about__subText{
         display: none;
     }
+    .about__heading{
+        align-self: flex-start;}
     .about__section{
         flex-direction: column;
     }
@@ -237,8 +239,9 @@
         margin-top:2rem ;
     }
     .about__heading{
-        align-self: flex-start;
         font-size: 2rem;
+        padding: 1rem 0;
+        margin-top: 1rem;
     }
     .about__heading .S{
         font-size: 2.4rem;
@@ -252,12 +255,11 @@
 }
 
 @media only screen and (max-width:420px){
-    .about__section{
-        margin-top:2.5rem ;
-    }
     .about__heading{
         align-self: flex-start;
         font-size: 1.5rem;
+    
+        margin-top: 1rem;
     }
 
     .about__text p{

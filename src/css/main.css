@@ -359,6 +359,12 @@ html{
     .container .content__section{
         align-items: center;
     }
+
+    .hero_content{
+        height: 100vh;
+        margin-bottom: 8rem;
+    }
+
     
     .container .content__section .hero_content .hero_header .hero_text_root{
         
