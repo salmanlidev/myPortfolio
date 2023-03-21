@@ -1,0 +1,124 @@
+.skill__section {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1%;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill__content__top {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.skill__content__bottom {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.skill__item {
+  width: 410px;
+  height: 290px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill__item img {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s transform;
+}
+
+.skill__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out background-color;
+}
+
+.viewProject__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #4dfd21;
+  border: none;
+  transition: 0.3s ease-in-out transform;
+  transform: scale(0);
+  cursor: pointer;
+}
+
+.skill__text {
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  color: #c5e6bf;
+  font-size: 2rem;
+  opacity: 1;
+  transition: 0.3s ease-in-out opacity;
+}
+
+.skill__item:hover .skill__overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.skill__item:hover .viewProject__btn {
+  transform: scale(1);
+}
+
+.skill__item:hover img {
+  transform: scale(1.1);
+}
+
+.skill__item:hover .skill__text {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1860px) {
+  .skill__section {
+    padding-top: 10rem;
+
+  }
+  .skill__content__top , .skill__content__bottom{
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+    .skill__section {
+        padding-top: 20rem;
+      }
+}
+
+@media only screen and (max-width: 860px){
+    .skill__section {
+        padding-top: 30rem;
+        height: 250vh;
+      }
+      .skill__content__top , .skill__content__bottom{
+        justify-content: center;
+      }
+} 
+
