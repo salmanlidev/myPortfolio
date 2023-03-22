@@ -3,7 +3,7 @@
 }
 
 .scrollbar{
-    position: fixed;
+    position:fixed;
     right: 6px;
     top: 20px;
     border-radius: 8px;

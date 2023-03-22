@@ -1,124 +1,139 @@
 .skill__section {
   width: 100%;
-  display: flex;
   height: 100vh;
+  display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 0 1%;
+  gap: 5rem;
+  padding: 0 3%;
+  position: relative;
+}
+
+.skill__subText {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  font-size: 10vw;
+  font-family: Minecraft;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  color: #5a5a5aaa;
+  z-index: 1;
+  user-select: none;
+}
+
+.skill__heading {
+  font-size: 5rem;
+  color: white;
+  position: relative;
+  user-select: none;
+  margin-top: 2rem;
+  z-index: 2;
+}
+
+.skill__heading::before {
+  content: "<h2>";
+  color: #7c7c7c;
+  position: absolute;
+  top: -0.6rem;
+  font-family: HandNote, monospace;
+  left: 0;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.skill__heading::after {
+  content: "</h2>";
+  color: #7c7c7c;
+  position: absolute;
+  bottom: -0.6rem;
+  font-family: HandNote, monospace;
+  left: 0;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.skill__row {
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.skill__content__top {
+.skill__col {
   display: flex;
-  width: 100%;
-  height: auto;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   align-items: center;
-}
-
-.skill__content__bottom {
-  display: flex;
-  width: 100%;
+  gap: 1rem;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
 }
 
 .skill__item {
-  width: 410px;
-  height: 290px;
+  width: 300px;
+  height: 300px;
+  z-index: 20;
+  display: flex;
   position: relative;
-  overflow: hidden;
 }
 
 .skill__item img {
-  height: 100%;
   width: 100%;
-  transition: 0.3s transform;
+  object-fit: cover;
 }
 
-.skill__overlay {
+.skill__item__content {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #00000089;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: 0.3s ease-in-out background-color;
+  justify-content: space-between;
 }
 
-.viewProject__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 90px;
-  height: 90px;
-  font-size: 1rem;
-  color: white;
-  font-weight: 700;
+.skill__item__btn {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #4dfd21;
+  color: white;
   border: none;
-  transition: 0.3s ease-in-out transform;
-  transform: scale(0);
-  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(77, 255, 0, 0.6);
 }
 
-.skill__text {
-  position: absolute;
-  top: 45%;
+.skill__item__text {
+  font-size: 1.1rem;
+  font-weight: bold;
   text-align: center;
-  color: #c5e6bf;
-  font-size: 2rem;
-  opacity: 1;
+  color: white;
+  text-shadow: 0 0 15px rgba(77, 255, 0, 0.6);
+}
+
+.skill__item__texts {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.557);
+  width: 100%;
+  opacity: 0;
   transition: 0.3s ease-in-out opacity;
 }
 
-.skill__item:hover .skill__overlay {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.skill__item:hover .viewProject__btn {
-  transform: scale(1);
-}
-
-.skill__item:hover img {
-  transform: scale(1.1);
-}
-
-.skill__item:hover .skill__text {
+.skill__item__bottom {
+  background-color: rgba(0, 0, 0, 0.557);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
   opacity: 0;
+  transition: 0.3s ease-in-out opacity;
 }
 
-@media only screen and (max-width: 1860px) {
-  .skill__section {
-    padding-top: 10rem;
-
-  }
-  .skill__content__top , .skill__content__bottom{
-    justify-content: center;
-  }
+.skill__item:hover .skill__item__texts  , .skill__item:hover .skill__item__bottom{
+  opacity: 1;
 }
-
-@media only screen and (max-width: 1100px) {
-    .skill__section {
-        padding-top: 20rem;
-      }
-}
-
-@media only screen and (max-width: 860px){
-    .skill__section {
-        padding-top: 30rem;
-        height: 250vh;
-      }
-      .skill__content__top , .skill__content__bottom{
-        justify-content: center;
-      }
-} 
-

@@ -5,7 +5,7 @@ let timer = null
 if (window.innerWidth > 700) {
     content.addEventListener("scroll", () => {
         timer && clearTimeout(timer)
-        let top = content.scrollTop
+        let top = content.scrollTop 
         scrollbar.style.transition = "0"
         scrollbar.style.opacity = 1
         scrollbar.style.transform = "scale(1)"
