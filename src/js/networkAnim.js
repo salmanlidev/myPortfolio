@@ -13,7 +13,10 @@ var options = {
 
 var rgb = options.lineColor.match(/\d+/g);
 
-document.addEventListener("DOMContentLoaded", init);
+if(window.innerWidth > 700){
+    document.addEventListener("DOMContentLoaded", init);
+}
+
 
 function init() {
     canvas = document.getElementById("canvas");
