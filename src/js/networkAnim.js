@@ -3,12 +3,12 @@ var w, h, loopId, id, canvas, ctx, particles;
 var options = {
     particleColor: "rgba(255,255,255)",
     lineColor: "rgba(77, 253, 33, 1)",
-    particleAmount: 40,
+    particleAmount: 30,
     defaultRadius: 2,
     variantRadius: 2,
     defaultSpeed: 1.2,
     variantSpeed: 1,
-    linkRadius: 250
+    linkRadius: 230
 };
 
 var rgb = options.lineColor.match(/\d+/g);

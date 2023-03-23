@@ -63,6 +63,7 @@
 .skill__col {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
@@ -134,6 +135,25 @@
   transition: 0.3s ease-in-out opacity;
 }
 
-.skill__item:hover .skill__item__texts  , .skill__item:hover .skill__item__bottom{
+.skill__item:hover .skill__item__texts,
+.skill__item:hover .skill__item__bottom {
   opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .skill__heading {
+    font-size: 3rem;
+  }
+
+  .skill__item {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .skill__item {
+    width: 300px;
+    height: 300px;
+  }
 }
