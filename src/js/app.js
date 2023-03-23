@@ -51,7 +51,6 @@ document.querySelector(".menu nav").addEventListener("click" , () => {
 let _CONTENT = [ 
 	"Frontend Devoloper", 
 	"Web Devoloper" ,
-    "UI Designer"
 ];
 
 // Current sentence being processed
