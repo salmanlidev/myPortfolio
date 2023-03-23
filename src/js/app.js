@@ -136,3 +136,9 @@ let tagCloud =  TagCloud('.skills', myTags , {
 	direction : 135 , 
 	keep : true
 });
+
+
+if(window.innerWidth < 700) {
+	document.querySelector(".about__section").removeAttribute("id")
+	document.querySelector(".about__left").setAttribute("id" , "about")
+}
