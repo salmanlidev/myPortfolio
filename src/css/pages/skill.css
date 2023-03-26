@@ -140,6 +140,12 @@
   opacity: 1;
 }
 
+@media only screen and (max-width:1426px){
+  .skill__section{
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .skill__heading {
     font-size: 3rem;
