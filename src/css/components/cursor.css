@@ -4,8 +4,8 @@
     border-radius:24px ;
     background-color: #4dfd21;
     position: fixed; 
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     z-index: 999999999999999999;
     /* transition: .1s; */
     pointer-events: none;

@@ -1,6 +1,7 @@
 @import "./components/root.css";
 @import "./pages/about.css";
 @import "./pages/skill.css";
+@import "./pages/contact.css";
 
 html{
     scroll-behavior: smooth;
