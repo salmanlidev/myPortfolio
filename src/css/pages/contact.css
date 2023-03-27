@@ -185,9 +185,9 @@
     box-shadow: 0 1px 2px #4dfd21;
 }
 
-.contact__form__right form input:invalid{
+/* .contact__form__right form input:invalid{
     box-shadow: 0 1px 2px #fd2121;
-}
+} */
 
 
 @keyframes animateButton {
