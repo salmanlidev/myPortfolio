@@ -86,8 +86,9 @@
 }
 
 .contact__form__item svg{
-    width: 35px;
+    width: 35px!important;
 }
+
 
 .contact__form__item span{
     font-weight: bold;
@@ -185,9 +186,9 @@
     box-shadow: 0 1px 2px #4dfd21;
 }
 
-/* .contact__form__right form input:invalid{
+.input__invalid{
     box-shadow: 0 1px 2px #fd2121;
-} */
+}
 
 
 @keyframes animateButton {
@@ -226,5 +227,18 @@
     }
     .contact__form__right{
         padding: 1rem;
+    }
+    .contact__form__left{
+        gap: 1.8rem;
+    }
+    .contact__form__item{
+        width: 100%;
+    }
+    .contact__form__item span{
+        font-size: 5vw;
+    }
+    
+    .contact__form__item p{
+        font-size: 4vw;
     }
 }
