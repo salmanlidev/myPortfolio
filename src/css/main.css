@@ -256,8 +256,6 @@ html{
     transition: box-shadow .3s ease-in-out , transform .3s ease-in-out;
 }
 
-
-
 .container .content__section .hero_content .hero_header .contact_btn:hover{
     box-shadow: 0 0 15px #23ff01a8 ,  inset 200px 0 0 0 #4dfd21;
     transform: scale(1.1);
