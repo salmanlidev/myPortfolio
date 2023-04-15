@@ -23,7 +23,7 @@ html{
     align-items: center;
     justify-content: space-between;
     padding-bottom: 2%;
-    z-index: 99;
+    z-index: 999;
 }
 
 .container .menu .menu_logo{
@@ -111,7 +111,7 @@ html{
     outline: none;
     cursor: pointer;
     display: none;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .menu_hamburger svg{
